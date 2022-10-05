@@ -1,6 +1,5 @@
-export const inputs = [
+const inputs = [
   {
-    id: 1,
     label: 'Name',
     type: 'text',
     name: 'name',
@@ -8,11 +7,10 @@ export const inputs = [
     pattern: '^[a-zA-Z0-9]{3,}$',
     placeholder: 'Name',
     errorMsg:
-      'Name should contain no special characters and at least of 3 characters',
+      'Name should contain no special characters and should be at least of 3 characters',
     required: true,
   },
   {
-    id: 2,
     label: 'Email',
     type: 'email',
     name: 'email',
@@ -22,22 +20,26 @@ export const inputs = [
     required: true,
   },
   {
-    id: 3,
     label: 'Password',
     type: 'password',
     name: 'password',
     id: 'password',
-    pattern: '/^[a-zA-Z0-9!@#$%^&*_=+-]{6,}$/g',
+    pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$`,
     placeholder: 'Password',
+    errorMsg:
+      'Password should include at least one character one number and one special character and should be at least 6 characters',
     required: true,
   },
   {
-    id: 4,
     label: 'Confirm Password',
     type: 'password',
     name: 'confirmPassword',
     id: 'confirmPassword',
     placeholder: 'Password',
+    pattern: formUser.password,
+    errorMsg: 'Password do not match',
     required: true,
   },
 ]
+
+export { inputs }
