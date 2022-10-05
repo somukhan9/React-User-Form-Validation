@@ -1,0 +1,53 @@
+.form > form > .input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form > form > .input-group > label{
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+}
+
+.form > form > .input-group > input{
+    padding: 12px;
+    width: 280px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.form > form > .input-group > input::placeholder{
+    color: gray;
+    font-family: inherit;
+}
+
+.form > form > .input-group > input ~ span.error{
+    color: red;
+    max-width: 280px;
+    font-size: 12px;
+    padding: 3px;
+    display: none;
+}
+
+.form > form > .input-group > input:invalid[focused="true"] {
+    border-color: red;
+}
+
+.form > form > .input-group > input:invalid[focused="true"] ~ span.error{
+  display: block;
+}
+
+.form > form > button {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

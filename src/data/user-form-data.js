@@ -1,0 +1,43 @@
+export const inputs = [
+  {
+    id: 1,
+    label: 'Name',
+    type: 'text',
+    name: 'name',
+    id: 'name',
+    pattern: '^[a-zA-Z0-9]{3,}$',
+    placeholder: 'Name',
+    errorMsg:
+      'Name should contain no special characters and at least of 3 characters',
+    required: true,
+  },
+  {
+    id: 2,
+    label: 'Email',
+    type: 'email',
+    name: 'email',
+    id: 'email',
+    placeholder: 'Email',
+    errorMsg: 'Please provide an valid Email',
+    required: true,
+  },
+  {
+    id: 3,
+    label: 'Password',
+    type: 'password',
+    name: 'password',
+    id: 'password',
+    pattern: '/^[a-zA-Z0-9!@#$%^&*_=+-]{6,}$/g',
+    placeholder: 'Password',
+    required: true,
+  },
+  {
+    id: 4,
+    label: 'Confirm Password',
+    type: 'password',
+    name: 'confirmPassword',
+    id: 'confirmPassword',
+    placeholder: 'Password',
+    required: true,
+  },
+]
