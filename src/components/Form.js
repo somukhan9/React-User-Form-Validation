@@ -64,12 +64,12 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(`Form Submitted Successfully.`)
-    setFormUser({
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    })
+    // setFormUser({
+    //   name: '',
+    //   email: '',
+    //   password: '',
+    //   confirmPassword: '',
+    // })
   }
 
   return (
